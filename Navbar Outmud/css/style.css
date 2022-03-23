@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+  /* width: 100%;
+  height: 100vh; */
+}
+
+.top {
+  padding: 0 50px;
+  width: 100%;
+  background-color: rgb(170, 167, 167);
+  color: rgb(0, 0, 0);
+  height: 50px;
+  cursor: pointer;
+}
+
+.top a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left > div + div {
+  margin-left: 40px;
+}
+
+.right > div {
+  margin-left: 20px;
+}
+
+.left > div:hover,
+.right > div:hover {
+  background: #d10909;
+  color: #ffffff;
+  transition: 0.5s;
+  border-radius: 3px;
+  padding: 7px 13px;
+}
+
+nav {
+  background: #ffffff;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  line-height: 130px;
+  padding: 0 100px;
+}
+
+.logo img {
+  width: 8rem;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 105px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(2, 1, 1);
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #d10909;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.second ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+}
+
+.sub-menu a {
+  font-size: 2vh;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: rgb(12, 1, 1);
+  float: right;
+  line-height: 115px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .top {
+    padding: 0 8px;
+    width: 100%;
+    background-color: rgb(170, 167, 167);
+    color: rgb(0, 0, 0);
+    height: 50px;
+    cursor: pointer;
+  }
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #d10909;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #f3f8fc;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
